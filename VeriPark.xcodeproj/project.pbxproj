@@ -14,6 +14,13 @@
 		289B07D426FE0BE300F9C6A4 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B07D326FE0BE300F9C6A4 /* MainVC.swift */; };
 		289B07D826FE12D000F9C6A4 /* VPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B07D726FE12D000F9C6A4 /* VPButton.swift */; };
 		289B07DA26FE2EF100F9C6A4 /* StockListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B07D926FE2EF100F9C6A4 /* StockListVC.swift */; };
+		289B07DC26FF5E8F00F9C6A4 /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B07DB26FF5E8F00F9C6A4 /* ContainerVC.swift */; };
+		289B07DE26FF5EB100F9C6A4 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B07DD26FF5EB100F9C6A4 /* MenuVC.swift */; };
+		289B07E026FF71EB00F9C6A4 /* GainersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B07DF26FF71EB00F9C6A4 /* GainersVC.swift */; };
+		289B07E226FF76F400F9C6A4 /* LosersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B07E126FF76F400F9C6A4 /* LosersVC.swift */; };
+		289B07E426FF778F00F9C6A4 /* Volume30VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B07E326FF778F00F9C6A4 /* Volume30VC.swift */; };
+		289B07E626FF779E00F9C6A4 /* Volume50VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B07E526FF779E00F9C6A4 /* Volume50VC.swift */; };
+		289B07E826FF77B000F9C6A4 /* Volume100VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B07E726FF77B000F9C6A4 /* Volume100VC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,13 @@
 		289B07D326FE0BE300F9C6A4 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		289B07D726FE12D000F9C6A4 /* VPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPButton.swift; sourceTree = "<group>"; };
 		289B07D926FE2EF100F9C6A4 /* StockListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListVC.swift; sourceTree = "<group>"; };
+		289B07DB26FF5E8F00F9C6A4 /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
+		289B07DD26FF5EB100F9C6A4 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		289B07DF26FF71EB00F9C6A4 /* GainersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GainersVC.swift; sourceTree = "<group>"; };
+		289B07E126FF76F400F9C6A4 /* LosersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LosersVC.swift; sourceTree = "<group>"; };
+		289B07E326FF778F00F9C6A4 /* Volume30VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Volume30VC.swift; sourceTree = "<group>"; };
+		289B07E526FF779E00F9C6A4 /* Volume50VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Volume50VC.swift; sourceTree = "<group>"; };
+		289B07E726FF77B000F9C6A4 /* Volume100VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Volume100VC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +95,14 @@
 			isa = PBXGroup;
 			children = (
 				289B07D326FE0BE300F9C6A4 /* MainVC.swift */,
+				289B07DB26FF5E8F00F9C6A4 /* ContainerVC.swift */,
+				289B07DD26FF5EB100F9C6A4 /* MenuVC.swift */,
 				289B07D926FE2EF100F9C6A4 /* StockListVC.swift */,
+				289B07DF26FF71EB00F9C6A4 /* GainersVC.swift */,
+				289B07E126FF76F400F9C6A4 /* LosersVC.swift */,
+				289B07E326FF778F00F9C6A4 /* Volume30VC.swift */,
+				289B07E526FF779E00F9C6A4 /* Volume50VC.swift */,
+				289B07E726FF77B000F9C6A4 /* Volume100VC.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -171,11 +192,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				289B07DC26FF5E8F00F9C6A4 /* ContainerVC.swift in Sources */,
 				289B07DA26FE2EF100F9C6A4 /* StockListVC.swift in Sources */,
 				289B07BE26FE09AB00F9C6A4 /* AppDelegate.swift in Sources */,
+				289B07DE26FF5EB100F9C6A4 /* MenuVC.swift in Sources */,
+				289B07E026FF71EB00F9C6A4 /* GainersVC.swift in Sources */,
+				289B07E226FF76F400F9C6A4 /* LosersVC.swift in Sources */,
+				289B07E826FF77B000F9C6A4 /* Volume100VC.swift in Sources */,
 				289B07D426FE0BE300F9C6A4 /* MainVC.swift in Sources */,
+				289B07E626FF779E00F9C6A4 /* Volume50VC.swift in Sources */,
 				289B07C026FE09AB00F9C6A4 /* SceneDelegate.swift in Sources */,
 				289B07D826FE12D000F9C6A4 /* VPButton.swift in Sources */,
+				289B07E426FF778F00F9C6A4 /* Volume30VC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,14 +16,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = createMainNC()
+        window?.rootViewController = MainVC()
         window?.makeKeyAndVisible()
-    }
-    
-    func createMainNC() -> UINavigationController {
-        let mainVC = MainVC()
-        mainVC.title = "IMKB Hisse ve Endeksler"
-        return UINavigationController(rootViewController: mainVC)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

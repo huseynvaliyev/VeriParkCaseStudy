@@ -22,8 +22,10 @@ class MainVC: UIViewController {
     }
     
     @objc func pushStockListVC() {
-        let stockListVC = StockListVC()
-        navigationController?.pushViewController(stockListVC, animated: true)
+        let stockListVC = ContainerVC()
+        stockListVC.modalPresentationStyle = .fullScreen
+        stockListVC.modalTransitionStyle = .flipHorizontal
+        present(stockListVC, animated: true, completion: nil)
     }
     
     private func configureLayout() {

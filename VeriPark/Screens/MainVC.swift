@@ -12,6 +12,7 @@ class MainVC: UIViewController {
     let logoImageView = UIImageView()
     let textLabel = UILabel()
     let actionButton = VPButton(backgroundColor: .systemGray4, title: "IMKB Hisse Senetleri/Endeksler")
+    let defaults = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,23 @@ class MainVC: UIViewController {
         navigationController?.navigationBar.barTintColor = UIColor(named: "AccentColor")
         navigationController?.navigationBar.tintColor = .black
         configureLayout()
+        let id = UIDevice.current.identifierForVendor?.uuidString
+        let modelName = UIDevice.modelName
+        let systemVersion = UIDevice.current.systemVersion
+        guard let deviceId = id else { return }
+        if defaults.string(forKey:"Authorization") == nil {
+            NetworkService.shared.startWithHandshake(id: deviceId, systemVersion: systemVersion, modelName: modelName) { result in
+                switch result {
+                case .success(let data):
+                    print("Data: \(data)")
+                    self.defaults.set(data.authorization, forKey: "Authorization")
+                    self.defaults.set(data.aesIV, forKey: "AESIV")
+                    self.defaults.set(data.aesKey, forKey: "AESKey")
+                case .failure(let error):
+                    print("\(error.localizedDescription)")
+                }
+            }
+        }
     }
     
     @objc func pushStockListVC() {

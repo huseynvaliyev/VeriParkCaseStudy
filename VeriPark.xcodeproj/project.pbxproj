@@ -21,6 +21,13 @@
 		289B07E426FF778F00F9C6A4 /* Volume30VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B07E326FF778F00F9C6A4 /* Volume30VC.swift */; };
 		289B07E626FF779E00F9C6A4 /* Volume50VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B07E526FF779E00F9C6A4 /* Volume50VC.swift */; };
 		289B07E826FF77B000F9C6A4 /* Volume100VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B07E726FF77B000F9C6A4 /* Volume100VC.swift */; };
+		289B07EB26FF7F6B00F9C6A4 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B07EA26FF7F6B00F9C6A4 /* UIViewController+Ext.swift */; };
+		289B07EE26FFA20900F9C6A4 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B07ED26FFA20900F9C6A4 /* Route.swift */; };
+		289B07F026FFA3EA00F9C6A4 /* Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B07EF26FFA3EA00F9C6A4 /* Methods.swift */; };
+		289B07F226FFA46F00F9C6A4 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B07F126FFA46F00F9C6A4 /* AppError.swift */; };
+		289B07F426FFA49400F9C6A4 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B07F326FFA49400F9C6A4 /* NetworkService.swift */; };
+		289B07F626FFA76600F9C6A4 /* UIDevice+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B07F526FFA76600F9C6A4 /* UIDevice+Ext.swift */; };
+		289B07F926FFAAC500F9C6A4 /* Handshake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B07F826FFAAC500F9C6A4 /* Handshake.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +47,13 @@
 		289B07E326FF778F00F9C6A4 /* Volume30VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Volume30VC.swift; sourceTree = "<group>"; };
 		289B07E526FF779E00F9C6A4 /* Volume50VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Volume50VC.swift; sourceTree = "<group>"; };
 		289B07E726FF77B000F9C6A4 /* Volume100VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Volume100VC.swift; sourceTree = "<group>"; };
+		289B07EA26FF7F6B00F9C6A4 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		289B07ED26FFA20900F9C6A4 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		289B07EF26FFA3EA00F9C6A4 /* Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Methods.swift; sourceTree = "<group>"; };
+		289B07F126FFA46F00F9C6A4 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		289B07F326FFA49400F9C6A4 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		289B07F526FFA76600F9C6A4 /* UIDevice+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Ext.swift"; sourceTree = "<group>"; };
+		289B07F826FFAAC500F9C6A4 /* Handshake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handshake.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +86,11 @@
 		289B07BC26FE09AB00F9C6A4 /* VeriPark */ = {
 			isa = PBXGroup;
 			children = (
+				289B07EC26FFA0BE00F9C6A4 /* NetworkLayer */,
+				289B07E926FF7F4200F9C6A4 /* Extensions */,
 				289B07D526FE129E00F9C6A4 /* Custom Views */,
 				289B07D226FE0BB900F9C6A4 /* Screens */,
+				289B07F726FFAAAC00F9C6A4 /* Models */,
 				289B07D126FE0A1900F9C6A4 /* Support */,
 				289B07CB26FE09AE00F9C6A4 /* Info.plist */,
 			);
@@ -121,6 +138,34 @@
 				289B07D726FE12D000F9C6A4 /* VPButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		289B07E926FF7F4200F9C6A4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				289B07EA26FF7F6B00F9C6A4 /* UIViewController+Ext.swift */,
+				289B07F526FFA76600F9C6A4 /* UIDevice+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		289B07EC26FFA0BE00F9C6A4 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				289B07F326FFA49400F9C6A4 /* NetworkService.swift */,
+				289B07ED26FFA20900F9C6A4 /* Route.swift */,
+				289B07EF26FFA3EA00F9C6A4 /* Methods.swift */,
+				289B07F126FFA46F00F9C6A4 /* AppError.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		289B07F726FFAAAC00F9C6A4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				289B07F826FFAAC500F9C6A4 /* Handshake.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,9 +238,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				289B07DC26FF5E8F00F9C6A4 /* ContainerVC.swift in Sources */,
+				289B07EB26FF7F6B00F9C6A4 /* UIViewController+Ext.swift in Sources */,
 				289B07DA26FE2EF100F9C6A4 /* StockListVC.swift in Sources */,
 				289B07BE26FE09AB00F9C6A4 /* AppDelegate.swift in Sources */,
+				289B07F226FFA46F00F9C6A4 /* AppError.swift in Sources */,
+				289B07F626FFA76600F9C6A4 /* UIDevice+Ext.swift in Sources */,
+				289B07F426FFA49400F9C6A4 /* NetworkService.swift in Sources */,
 				289B07DE26FF5EB100F9C6A4 /* MenuVC.swift in Sources */,
+				289B07EE26FFA20900F9C6A4 /* Route.swift in Sources */,
 				289B07E026FF71EB00F9C6A4 /* GainersVC.swift in Sources */,
 				289B07E226FF76F400F9C6A4 /* LosersVC.swift in Sources */,
 				289B07E826FF77B000F9C6A4 /* Volume100VC.swift in Sources */,
@@ -203,7 +253,9 @@
 				289B07E626FF779E00F9C6A4 /* Volume50VC.swift in Sources */,
 				289B07C026FE09AB00F9C6A4 /* SceneDelegate.swift in Sources */,
 				289B07D826FE12D000F9C6A4 /* VPButton.swift in Sources */,
+				289B07F026FFA3EA00F9C6A4 /* Methods.swift in Sources */,
 				289B07E426FF778F00F9C6A4 /* Volume30VC.swift in Sources */,
+				289B07F926FFAAC500F9C6A4 /* Handshake.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

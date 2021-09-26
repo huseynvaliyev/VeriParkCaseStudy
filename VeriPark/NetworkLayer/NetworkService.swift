@@ -18,9 +18,14 @@ struct NetworkService {
         request(route: .handshake, method: .post, parameters: params, completion: completion)
     }
     
-    private func request<T: Decodable>(route: Route, method: Methods, parameters: [String: Any], completion: @escaping(Result<T, Error>) -> Void) {
+    func getStockList(auth:String, period: String, completion: @escaping(Result<Stocks, Error>) -> Void) {
+        let params = ["period": period] as [String: Any]
+        request(route: .stockList, method: .post, parameters: params, auth: auth, completion: completion)
+    }
+    
+    private func request<T: Decodable>(route: Route, method: Methods, parameters: [String: Any], auth: String? = nil ,completion: @escaping(Result<T, Error>) -> Void) {
         
-        guard let request = createRequest(route: route, method: method, parameters: parameters) else {
+        guard let request = createRequest(route: route, method: method, parameters: parameters, auth: auth) else {
             completion(.failure(AppError.unknownError))
             return
         }
@@ -30,8 +35,8 @@ struct NetworkService {
             var result: Result<Data, Error>?
             if let data = data {
                 result = .success(data)
-//                let responseString = String(data: data, encoding: .utf8) ?? "Could not stringify our data"
-//                print("The response is:\n \(responseString)")
+                let responseString = String(data: data, encoding: .utf8) ?? "Could not stringify our data"
+                print("The response is:\n \(responseString)")
             } else if let error = error {
                 result = .failure(error)
                 print("The error is: \(error.localizedDescription)")
@@ -67,11 +72,15 @@ struct NetworkService {
     }
     
     
-    private func createRequest(route: Route, method: Methods, parameters: [String: Any]) -> URLRequest? {
+    private func createRequest(route: Route, method: Methods, parameters: [String: Any], auth: String? = nil) -> URLRequest? {
         let urlString = Route.baseURL + route.description
         guard let url = URL(string: urlString) else { return nil}
         var urlRequest = URLRequest(url: url)
         urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        if let auth = auth {
+            print("Auth: \(auth)")
+            urlRequest.addValue(auth, forHTTPHeaderField: "X-VP-Authorization")
+        }
         urlRequest.httpMethod = method.rawValue
         do {
             urlRequest.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)

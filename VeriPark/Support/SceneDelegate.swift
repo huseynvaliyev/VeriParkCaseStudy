@@ -10,7 +10,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    let defaults = UserDefaults.standard
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
@@ -18,6 +18,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         window?.rootViewController = MainVC()
         window?.makeKeyAndVisible()
+        makeHandshake()
+    }
+    
+    func makeHandshake() {
+        let id = UIDevice.current.identifierForVendor?.uuidString
+        let modelName = UIDevice.modelName
+        let systemVersion = UIDevice.current.systemVersion
+        guard let deviceId = id else { return }
+        NetworkService.shared.startWithHandshake(id: deviceId, systemVersion: systemVersion, modelName: modelName) { result in
+            switch result {
+            case .success(let data):
+                print("Data: \(data)")
+                self.defaults.set(data.authorization, forKey: "Authorization")
+                self.defaults.set(data.aesIV, forKey: "AESIV")
+                self.defaults.set(data.aesKey, forKey: "AESKey")
+            case .failure(let error):
+                print("\(error.localizedDescription)")
+            }
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

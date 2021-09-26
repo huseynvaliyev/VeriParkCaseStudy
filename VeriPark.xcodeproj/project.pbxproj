@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2849A95526FFEBFC00FFC8AA /* AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2849A95426FFEBFC00FFC8AA /* AES.swift */; };
+		2849A95726FFEF5D00FFC8AA /* Stocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2849A95626FFEF5D00FFC8AA /* Stocks.swift */; };
 		289B07BE26FE09AB00F9C6A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B07BD26FE09AB00F9C6A4 /* AppDelegate.swift */; };
 		289B07C026FE09AB00F9C6A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289B07BF26FE09AB00F9C6A4 /* SceneDelegate.swift */; };
 		289B07C726FE09AE00F9C6A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 289B07C626FE09AE00F9C6A4 /* Assets.xcassets */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2849A95426FFEBFC00FFC8AA /* AES.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AES.swift; sourceTree = "<group>"; };
+		2849A95626FFEF5D00FFC8AA /* Stocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stocks.swift; sourceTree = "<group>"; };
 		289B07BA26FE09AB00F9C6A4 /* VeriPark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeriPark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		289B07BD26FE09AB00F9C6A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		289B07BF26FE09AB00F9C6A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,9 +115,9 @@
 		289B07D226FE0BB900F9C6A4 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				289B07D326FE0BE300F9C6A4 /* MainVC.swift */,
 				289B07DB26FF5E8F00F9C6A4 /* ContainerVC.swift */,
 				289B07DD26FF5EB100F9C6A4 /* MenuVC.swift */,
+				289B07D326FE0BE300F9C6A4 /* MainVC.swift */,
 				289B07D926FE2EF100F9C6A4 /* StockListVC.swift */,
 				289B07DF26FF71EB00F9C6A4 /* GainersVC.swift */,
 				289B07E126FF76F400F9C6A4 /* LosersVC.swift */,
@@ -164,6 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				289B07F826FFAAC500F9C6A4 /* Handshake.swift */,
+				2849A95426FFEBFC00FFC8AA /* AES.swift */,
+				2849A95626FFEF5D00FFC8AA /* Stocks.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -184,6 +190,8 @@
 			dependencies = (
 			);
 			name = VeriPark;
+			packageProductDependencies = (
+			);
 			productName = VeriPark;
 			productReference = 289B07BA26FE09AB00F9C6A4 /* VeriPark.app */;
 			productType = "com.apple.product-type.application";
@@ -211,6 +219,8 @@
 				Base,
 			);
 			mainGroup = 289B07B126FE09AB00F9C6A4;
+			packageReferences = (
+			);
 			productRefGroup = 289B07BB26FE09AB00F9C6A4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -246,12 +256,14 @@
 				289B07F426FFA49400F9C6A4 /* NetworkService.swift in Sources */,
 				289B07DE26FF5EB100F9C6A4 /* MenuVC.swift in Sources */,
 				289B07EE26FFA20900F9C6A4 /* Route.swift in Sources */,
+				2849A95526FFEBFC00FFC8AA /* AES.swift in Sources */,
 				289B07E026FF71EB00F9C6A4 /* GainersVC.swift in Sources */,
 				289B07E226FF76F400F9C6A4 /* LosersVC.swift in Sources */,
 				289B07E826FF77B000F9C6A4 /* Volume100VC.swift in Sources */,
 				289B07D426FE0BE300F9C6A4 /* MainVC.swift in Sources */,
 				289B07E626FF779E00F9C6A4 /* Volume50VC.swift in Sources */,
 				289B07C026FE09AB00F9C6A4 /* SceneDelegate.swift in Sources */,
+				2849A95726FFEF5D00FFC8AA /* Stocks.swift in Sources */,
 				289B07D826FE12D000F9C6A4 /* VPButton.swift in Sources */,
 				289B07F026FFA3EA00F9C6A4 /* Methods.swift in Sources */,
 				289B07E426FF778F00F9C6A4 /* Volume30VC.swift in Sources */,
